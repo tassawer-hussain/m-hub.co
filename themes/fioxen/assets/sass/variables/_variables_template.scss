@@ -1,0 +1,30 @@
+@import "../bootstrap/functions";
+@import "../bootstrap/variables";
+
+//Fonts
+// --------------------------------------------------
+$font-second               : 'gilmer' !default;
+$font-icon-awesome         : 'Font Awesome 5 Free' !default;
+$font-icon-line            : 'Line Awesome Free' !default;
+// Colors
+$white                     : #ffffff !default;
+$nocolor                   : transparent !default;
+$theme-color               : var(--e-global-color-primary) !default;
+$theme-color-2             : var(--e-global-color-secondary) !default;
+$theme-color-black         : #1F2230 !default;
+$bg-gray                   : #f7f7f7 !default; 
+$bg-input                  : #FBFBFB !default; 
+$color-gray                : #737373 !default;
+$rating-color              : #FEBB02 !default;
+
+
+$footer-bg-color           : var(--#{$variable-prefix}footer-bg-color) !default;
+$footer-color              : var(--#{$variable-prefix}footer-color) !default;
+$footer-color-link         : var(--#{$variable-prefix}footer-color-link) !default;
+$footer-color-link-hover   : var(--#{$variable-prefix}footer-color-link-hover) !default;
+// Variables
+// --------------------------------------------------
+$image-theme-path-base  :'../images/' !default;
+$font-path              : '../fonts/';
+$woo-font-path          : '../fonts/woocommerce/' !default;
+

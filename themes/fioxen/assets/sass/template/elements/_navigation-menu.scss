@@ -1,0 +1,32 @@
+.gva-navigation-menu{
+   &.menu-align-center{
+      text-align: center;
+      .gva-nav-menu{
+         display: inline-block;
+         float: none;
+         margin-bottom: -10px;
+      }
+   }
+   &.menu-align-right{
+      .gva-nav-menu{
+         float: right;
+      }
+   }
+}
+
+.gva-navigation-mobile{
+   .dropdown-toggle{
+      display: inline-block;
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      background: $bg-gray;
+      line-height: 30px;
+      padding-top: 8px;
+      text-align: center;
+      font-size: 22px;
+      &:after{
+         display: none;
+      }
+   }
+}

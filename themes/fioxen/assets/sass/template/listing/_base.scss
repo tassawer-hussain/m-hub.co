@@ -1,0 +1,59 @@
+.lt-review-show-start{
+	display: flex;
+	align-items: center;
+	position: relative;
+	.lt-review-name{
+		display: inline-block;
+		margin-right: 6px;
+		font-size: 14px;
+		color: $black;
+		font-weight: 600;
+		float: left;
+		line-height: 20px;
+	}
+	.lt-review-suffix{
+		margin-left: 6px;
+		font-size: 13px;
+		line-height: 20px;
+		margin-top: -5px;
+		font-weight: 600;
+	}
+	.review-results{
+		display: inline-block;
+		position: relative;
+		height: 20px;
+		font-size: 14px;
+		float: left;
+		span{ 
+			display: inline-block;
+			@include size(18px, 18px);
+			.star{
+				font-size: 14px;
+				@include size(100%, 100%);
+			}
+		}
+		.base-stars{
+			white-space: nowrap;
+			height: 18px;
+			span{
+				color: #DEE2E8;
+			}
+		}
+		.votes-stars{
+			overflow: hidden;
+			white-space: nowrap;
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 18px;
+			span{
+				color: $rating-color;
+			}
+		}
+	}
+}
+
+
+.no_job_listings_found{
+   margin: 0 15px;
+}

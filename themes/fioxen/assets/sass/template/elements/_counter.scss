@@ -1,0 +1,155 @@
+.milestone-block {
+	position: relative;
+	.milestone-content{
+		.milestone-number-inner{
+			.symbol{
+				&.after{
+					margin-left: -5px;
+				}
+				&.before{
+					margin-right: -5px;
+				}
+			}
+		}
+	}
+	.link-overlay{
+		position: absolute;
+		@include size(100%, 100%);
+		top: 0;
+		left: 0;
+		z-index: 11;
+	}
+
+	&.style-1{
+		text-align: left;
+		.milestone-content{
+			.sub-title{
+				font-family: $headings-font-family;
+				font-weight: 700;
+				font-size: 16px;
+			}
+			.milestone-number-inner{
+				font-size: 36px;
+				color: $theme-color;
+				font-weight: 700;
+				font-family: $headings-font-family;
+				@include media-breakpoint-down(lg){
+					font-size: 32px;
+				}
+			}
+			.milestone-text{
+				font-size: 22px;
+				line-height: 24px;
+				margin: 2px 0 20px;
+				@media(max-width: 1024px){
+					font-size: 18px;
+					line-height: 20px;
+				}
+			}
+		}
+	}
+	&.style-2{
+		.box-content{
+			position: relative;
+			display: flex;
+			align-items: center;
+			justify-content: start;
+			.milestone-icon{
+				display: block;
+				line-height: 1; 
+				.icon{
+					width: 125px;
+					height: 125px;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					background: $bg-gray;
+					color: $theme-color;
+					transition: all 0.35s;
+					@media(max-width: 1024px){
+						width: 90px;
+						height: 90px;
+					}
+					svg{
+						fill: $theme-color;
+					}
+				}
+			}
+			.milestone-content{
+				text-align: left;
+				.milestone-number-inner{
+					font-size: 40px;
+					line-height: 1;
+					color: $black;
+					margin-bottom: 10px;
+					font-weight: 700;
+					font-family: $headings-font-family; 
+					letter-spacing: 1px;
+					@media(max-width: 1024px){
+						font-size: 32px;
+					}
+				}
+				.milestone-text{
+					font-weight: 500;
+					line-height: 24px;
+				}
+			}
+		}
+	} 
+	&.style-3{
+		.box-content{
+			position: relative;
+			display: flex;
+			align-items: center;
+			justify-content: end;
+			.milestone-icon{
+				line-height: 1; 
+				order: 2;
+				.icon{
+					width: 120px;
+					height: 120px;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					background: $bg-gray;
+					color: $theme-color;
+					transition: all 0.35s;
+					svg{
+						fill: $theme-color;
+					}
+				}
+			}
+			.milestone-content{
+				text-align: right;
+				order: 1;
+				.milestone-number-inner{
+					font-size: 40px;
+					line-height: 1;
+					color: $black;
+					margin-bottom: 10px;
+					font-weight: 500;
+					font-family: $headings-font-family; 
+					letter-spacing: 1px;
+					@include media-breakpoint-down(xl){
+						font-size: 36px;
+					}
+					@include media-breakpoint-down(lg){
+						font-size: 32px;
+					}
+				}
+				.milestone-text{
+					font-weight: 500;
+				}
+			}
+		}
+	}
+	&:hover{
+		.milestone-icon{
+			.icon{
+				svg, i{
+					animation: beat 1.5s ease 0s infinite;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,561 @@
+.single_job_listing > .job-listing-meta{
+	display: none!important;
+}
+.element-item-listing{
+	.block-title{
+		font-size: 24px;
+		margin: 0 0 20px;
+	}
+}
+.gva-listing-duration, .gva-listing-language, .gva-listing-price_from, .gva-listing-custom-field{
+	.content-inner{
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		.icon{
+			padding-right: 10px;
+			color: $theme-color;
+		}
+		.box-content{
+			.lt-meta-title{
+				font-size: 15px;
+				margin: 0 0 2px;
+				color: $body-color;
+				font-weight: 600;
+			}
+			.item-value{
+				color: $black;
+				font-weight: 500;
+			}
+		}
+	}
+}
+
+.gva-listing-rating{
+	.review-results{
+		margin-top: 5px;
+	}
+	.review-star{
+		display: flex;
+		align-items: center;
+		.review-results span .star{
+			font-size: 16px;
+		}
+		.review-text{
+			padding-left: 10px;
+			font-weight: 600;
+		}
+		.votes-stars{
+			color: $rating-color;
+		}
+	}
+}
+
+.gva-listing-logo{
+	.content-inner{
+		overflow: hidden;
+		max-width: 100px;
+		box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+		border-radius: 6px;
+		background: $white;
+		padding: 10px;
+	}
+}
+
+.gva-listing-gallery{
+	position: relative;
+	.swiper-slider-wrapper{
+		.swiper-nav-next{
+			right: 15px!important;
+		}
+		.swiper-nav-prev{
+			left: 15px!important;
+		}
+	}
+	.lt-media{
+		font-size: 16px;
+		line-height: 1;
+		background: rgba(0, 0, 0, 0.5);
+		a{
+			color: $white;
+			margin-left: 12px;
+			i{
+				font-size: 23px;
+			}
+			&.lt-gallery{
+				margin-left: 0;
+				position: relative;
+				span{
+					display: inline-block;
+					background: $theme-color;
+					color: $white;
+					width: 14px;
+					height: 14px;
+					border-radius: 50%;
+					line-height: 1;
+					font-size: 11px;
+					line-height: 14px;
+					position: absolute;
+					text-align: center;
+					right: -4px;
+					top: -6px;
+				}
+			}
+			&:hover{
+				color: $theme-color;
+			}
+		}
+	}
+	 &.style-1{
+		.lt-media{
+			position: absolute;
+			right: 0;
+			bottom: 0;
+			z-index: 11;
+			padding: 10px 20px;
+		}
+	 }
+	 &.style-2{
+		overflow: hidden;
+		.image-large{
+			padding-right: 5px;
+		}
+		.images-small-wrapper{
+			.small-image-item{
+				width: 50%;
+				float: left;
+				padding-right: 5px;
+				padding-bottom: 5px;
+			}
+		}
+		.lt-media{
+			position: absolute;
+			right: 5px;
+			bottom: 6px;
+			z-index: 11;
+			padding: 10px 20px;
+		}
+	}
+	&.style-3{
+		.background-image{
+			position: relative;
+			&:after{
+				content: '';
+				width: 100%;
+				height: 100%;
+				background: rgba(0, 0, 0, 0.6);
+				position: absolute;
+				top: 0;
+				left: 0;
+				z-index: 1;
+			}
+		}
+	}
+}
+
+.gva-listing-rating-criteria{
+	.review-progress-wrapper{
+		padding-left: 100px;
+		margin-bottom: 40px;
+		position: relative;
+		.review__progress-label{
+			font-weight: 600;
+			color: $black;
+			float: left;
+			width: 95px;
+			position: absolute;
+			top: -15px;
+			left: 0;
+			text-transform: capitalize;
+		}
+		.review__progress {
+			background-color: $bg-gray;
+			position: relative;
+			overflow: visible;
+			z-index: 11;
+			.review__progress-bar{
+			 	@include transition(width 1s ease-in-out);
+				height: 8px;
+				background: $theme-color;
+				position: relative;
+				display: block;
+				width: 0;
+				border-radius: 6px;
+				.percentage{
+					position: absolute;
+					bottom: 100%;
+					left: 100%;
+					z-index: 1;
+					padding: 3px 6px;
+					background: $theme-color;
+					font-size: 12px;
+					color: $white;
+					margin-bottom: 5px;
+					line-height: 1;
+					&:after{
+						content: "";
+						border: 5px solid transparent;
+						border-top-color: $theme-color;
+						position: absolute;
+						top: 100%;
+						left: 0;
+						z-index: 1;
+						transform: rotate(-90deg);
+						margin-top: -6px;
+					}
+					&.percentage-left{ 
+						left: auto;
+						right: 0;
+						&:after{
+							right: 0;
+							left: auto;
+							transform: rotate(90deg);
+							margin-right: 2px;
+						}
+					}
+				}
+			}
+		}
+	}
+	.listing-total-reviews{
+		border-radius: 4px;
+		border: 1px solid $border-color;
+		> .content-inner{
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			justify-content: space-between;
+			.reviews-left{
+				text-align: center;
+				-webkit-box-flex: 0;
+				flex: 0 0 30%;
+				max-width: 30%;
+				@media(max-width: 680px){
+					flex: 0 0 100%;
+					max-width: 100%;
+					padding: 20px 0;
+				}
+				.reviews-average{
+					.rating-score{
+						font-size: 60px;
+						color: $black;
+						line-height: 1.2;
+						span{
+							font-size: 22px;
+							color: $body-color;
+						}
+					}
+					.vote-text{
+						font-weight: 700;
+						font-family: $headings-font-family;
+						color: $theme-color;
+						font-size: 18px;
+						line-height: 1.1;
+					}
+					.vote-number{
+						font-weight: 500;
+					}
+				}
+				.reviews-average-star{
+					margin-top: 5px;
+					.lt-review-show-start{
+						justify-content: center;
+					}
+				}
+			}
+			.reviews-right{ 
+				-webkit-box-flex: 0;
+				flex: 0 0 70%;
+				max-width: 70%;
+				border-left: 1px solid $border-color;
+				@media(max-width: 680px){
+					flex: 0 0 100%;
+					max-width: 100%;
+					border-left: 0;
+					border-top: 1px solid $border-color;
+				}
+				.content-inner{
+					padding: 45px 40px; 
+					@media(max-width: 1024px){
+						padding: 25px 15px;
+					}
+					.result-item{
+						&:last-child{
+							.review-progress-wrapper{
+								margin-bottom: 0;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.gva-listing-tags{
+	.block-content{
+		a.tag-item{
+			background: $bg-gray;
+			display: inline-block;
+			padding: 5px 20px;
+			border-radius: 4px;
+			font-size: 12px;
+			text-transform: uppercase;
+			letter-spacing: 2px;
+			color: $body-color;
+			margin-right: 5px;
+			margin-bottom: 10px;
+			font-weight: 600;
+			font-family: $headings-font-family;
+			&:hover{
+				background: $theme-color;
+				color: $white;
+			}
+		}
+	}
+}
+
+.gva-listing-map{
+	#lt-listing--map{
+		height: 340px;
+		width: 100%;
+		top: 0!important;
+		position: relative;
+		z-index: 11;
+		#listing-single-icon{
+			fill: $theme-color;
+		}
+	}
+}
+
+.gva-listing-amenities{
+	.listing-amenities{
+		.block-title{
+			margin-bottom: 30px;
+		}
+		.block-content{
+			.amenities-list{
+				margin: 0;
+				padding: 0;
+				> li.amenity-item{
+					width: 33.33%;
+					float: left;
+					list-style-type: none;
+					font-weight: 500;
+					margin-bottom: 25px;
+					padding-right: 10px;
+					&:nth-of-type(3n+1) {
+					   clear: both;
+					}
+					@include media-breakpoint-down(md){
+						width: 50%;
+						&:nth-of-type(3n+1) {
+						   clear: none;
+						}
+						&:nth-of-type(2n+1) {
+						   clear: none;
+						}
+					}
+					@media(max-width: 500px){
+						width: 100%;
+					}
+					.icon-box{
+						width: 42px;
+						display: inline-block;
+						.icon{
+							font-size: 32px;
+							color: $theme-color;
+						}
+						.icon-image{
+							max-width: 32px;
+						}
+					}
+					.name{
+						position: relative;
+						top: -5px;
+					}
+					&.without-icon{
+						.icon-box{
+							.icon{
+								color: $theme-color;
+								line-height: 30px;
+								font-size: 32px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.gva-listing-opening-hour{
+	.block-content{
+		.item{
+			border-bottom: 1px dashed rgba(0, 0, 0, 0.1);
+			margin-bottom: 15px;
+			padding-bottom: 15px;
+			&:last-child{
+				margin-bottom: 0;
+				padding-bottom: 0;
+				border: none;
+			}
+			label{ 
+				width: 100px;
+				float: left;
+				margin: 0;
+			}
+			.text-value{
+				padding-left: 110px;
+				text-align: right;
+				.sub-value{
+					display: block;
+					color: $black;
+				}
+			}
+		}
+		.current-time{
+			background: $theme-color;
+			width: 100%;
+			padding: 10px 10px;
+			color: $white;
+			text-align: center;
+			margin-top: 20px;
+			border-radius: 4px;
+			.time{
+				text-transform: uppercase;
+			}
+		}
+	}
+}
+
+.gva-listing-info{
+	.content-inner{
+		i{
+			color: $theme-color;
+			width: 28px;
+			display: inline-block;
+			position: relative;
+			top: 3px;
+		}
+		a{
+			color: $body-color;
+			&:hover{
+				color: $theme-color;
+			}
+		}
+	}
+}
+
+.gva-listing-booking{
+	&.booking-type-link{
+		padding: 30px;
+		border-radius: 8px;
+		border: 1px solid $border-color;
+		.booking-online{
+			.block-title{
+				text-align: center;
+			}
+			.booking-online-item{
+				text-align: center;
+				margin-bottom: 20px;
+				&:last-child{
+					margin-bottom: 0;
+				}
+				.btn-booking-online{
+					display: block;
+					font-size: 16px;
+					font-weight: 700;
+					font-family: $headings-font-family;
+					background: $theme-color;
+					color: $white;
+					padding: 10px 20px;
+					width: 100%;
+					border-radius: 30px;
+					margin-bottom: 5px;
+				}
+			}
+		}
+	}
+	&.booking-type-banner{
+		max-width: 550px;
+		margin: 0 auto;
+		border-radius: 8px;
+		overflow: hidden;
+	}
+	&.booking-type-contact{
+		padding: 30px;
+		border: 1px solid $border-color;
+		border-radius: 8px;
+		.author-email{
+			display: none;
+		}
+	}
+}
+
+.gva-listing-social-media{
+	a{
+		display: inline-block;
+		@include size(46px, 46px);
+		border: 1px solid #efefef;
+		line-height: 46px;
+		margin-right: 10px;
+		text-align: center;
+		font-size: 16px;
+		background: $white;
+		color: $body-color;
+		&:last-child{
+			margin-right: 0;
+		}
+		&:hover{
+			background: $theme-color;
+			color: $white;
+		}
+	}
+}
+
+.gva-listing-comment{
+	.the-comment{
+		.comment-rating-ul{ 
+			display: flex;
+			flex-wrap: wrap;
+			margin: 10px 0 10px;
+			list-style: none;
+			padding: 0;
+			> li{
+				margin-right: 30px;
+				margin-bottom: 10px;
+				&:last-child{
+					margin-right: 0;
+				}
+				> span{
+					display: block;
+					font-size: 15px;
+					font-weight: 500;
+					line-height: 24px;
+					&.comment-rating-stars{
+						font-size: 12px;
+						letter-spacing: -2px;
+						color: $rating-color;
+					}
+				}
+			}
+		}
+	}
+}
+
+.gva-listing-additional-info{
+	.block-content{
+		.item-info{
+			margin-bottom: 8px;
+			display: flex;
+			justify-content: space-between;
+			&:last-child{
+				margin-bottom: 0;
+			}
+			.value{
+				color: $black;
+			}
+		}
+	}
+}

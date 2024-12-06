@@ -1,0 +1,1350 @@
+// -------- Listing Block ---------------
+.listing-block{
+   box-shadow: 0px 10px 35px 0px rgba(0, 0, 0, 0.05);
+   border-radius: 6px;
+   overflow: hidden;
+   margin-bottom: 30px;
+   .listing-image{
+      position: relative;
+      min-height: 50px;
+      background: $bg-gray;
+      &:after{
+         content: '';
+         position: absolute;
+         top: 0;
+         left: 0;
+         z-index: 1;
+         @include size(100%, 100%);
+         background-image: -webkit-linear-gradient(to top, rgba(0,0,0,0) 60%, rgba(0,0,0,0.8) 99%, rgb(0,0,0) 100%);
+         background-image: -moz-linear-gradient(to top, rgba(0,0,0,0) 60%, rgba(0,0,0,0.8) 99%, rgb(0,0,0) 100%);
+         background-image: -ms-linear-gradient(to top, rgba(0,0,0,0) 60%, rgba(0,0,0,0.8) 99%, rgb(0,0,0) 100%);
+         background-image: -o-linear-gradient(to top, rgba(0,0,0,0) 60%, rgba(0,0,0,0.8) 99%, rgb(0,0,0) 100%);
+         background-image: linear-gradient(to top, rgba(0,0,0,0) 60%, rgba(0,0,0,0.8) 99%, rgb(0,0,0) 100%);
+      }
+      .listing-logo{
+         position: absolute;
+         top: 20px;
+         right: 20px;
+         @include size(45px, 45px);
+         border-radius: 50%;
+         padding: 6px;
+         overflow: hidden;
+         box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08);
+         background: $white; 
+         z-index: 11;
+      }
+      .link-overlay{
+         @include size(100%, 100%);
+         position: absolute;
+         top: 0;
+         left: 0;
+         z-index: 9;
+      }
+   }
+   .listing-content{
+      background: $white;
+      position: relative;
+      .lt-meta-top{
+         padding: 10px 30px;
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+         background: $theme-color-2;
+         position: absolute;
+         top: -30px;
+         left: -0.5px;
+         right: 50px;
+         z-index: 11;
+         overflow: hidden;
+         clip-path: polygon(0 0, 100% 0, 97% 100%, 0% 100%);
+         @media(max-width: 1200px){
+            padding: 10px 20px;
+            right: 20px;
+         }
+         .listing-time{
+            display: inline-block;
+            font-size: 11px;
+            color: $white;
+            font-weight: 600;
+            padding: 1px 10px;
+            background: $theme-color;
+            z-index: 11;
+            line-height: 22px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            &.open{
+               background: #35C54C;
+            }
+         }
+      }
+      .lt-content-block{
+         padding: 50px 30px 16px;
+         @media(max-width: 1024px){
+            padding-left: 20px;
+            padding-right: 20px;
+         }
+      }
+      .title{
+         font-size: 20px;
+         margin: 5px 0 5px;
+      }
+      .listing-tagline{
+         line-height: 24px;
+         margin: 2px 0 10px;
+         p{
+            margin-bottom: 0;
+         }
+      }
+     
+      .listing-meta{
+         margin-top: 15px;
+         font-size: 14px;
+         line-height: 20px;
+         font-weight: 500;
+         > div{
+            margin-bottom: 6px;
+            .icon{
+               width: 20px;
+               margin-right: 6px;
+               font-size: 19px;
+               position: relative;
+               top: 3px;
+               color: $theme-color;
+            }
+            a{
+               color: $body-color;
+               &:hover{
+                  color: $theme-color;
+               }
+            }
+         }
+      }
+      .content-footer{
+         border-top: 1px solid $border-color;
+         padding: 15px 0 0;
+         margin-top: 22px;
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+         .location{
+            font-size: 14px;
+            a{
+               color: $body-color;
+               &:hover{
+                  color: $theme-color;
+               }
+            }
+            .icon{
+               width: 12px;
+               margin-right: 4px;
+               font-size: 15px;
+               color: $theme-color;
+            }
+         }
+         .wishlist-icon-content{
+            line-height: 1;
+            a{
+               display: inline-block;
+               transition: all 0.35s;
+               font-size: 16px;
+               &.wishlist-added{
+                  .icon{
+                     &:before{
+                        color: $theme-color;
+                        font-weight: 900;
+                     }
+                  }
+               }
+               &:hover{
+                  font-size: 19px;
+               }
+            }
+         }
+      }
+   }
+   &.job_position_featured{
+      .listing-image{
+         .lt-featured{
+            display: block!important;
+            font-size: 11px;
+            color: $white;
+            background: $theme-color;
+            font-weight: 500;
+            padding: 0 15px;
+            line-height: 28px;
+            position: absolute;
+            left: 20px;
+            top: 20px;
+            z-index: 11;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+         }
+         span{
+            position: relative;
+            z-index: 11;
+            color: $white;
+         }
+      }
+   }
+}
+
+.hm_lg-block-grid-3{
+   .listing-block {
+      .listing-content {
+         .lt-meta-top{
+            padding: 10px 22px 10px 20px;
+         }
+         .lt-content-block{
+            padding-left: 22px;
+            padding-right: 22px;
+         }
+      }
+   }
+}
+
+.listing-block-2{
+   box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.05);
+   border-radius: 4px;
+   overflow: hidden;
+   margin-bottom: 30px;
+   position: relative;
+   .listing-image{
+      position: relative;
+      &:after{
+         content: '';
+         position: absolute;
+         top: 0;
+         left: 0;
+         z-index: 1;
+         @include size(100%, 100%);
+         background-image: -webkit-linear-gradient(0deg, rgb(0,0,0) 0%, rgba(0,0,0,0.99) 1%, rgba(0,0,0,0) 100%);
+         background-image: -moz-linear-gradient(0deg, rgb(0,0,0) 0%, rgba(0,0,0,0.99) 1%, rgba(0,0,0,0) 100%);
+         background-image: -ms-linear-gradient(0deg, rgb(0,0,0) 0%, rgba(0,0,0,0.99) 1%, rgba(0,0,0,0) 100%);
+         background-image: -o-linear-gradient(0deg, rgb(0,0,0) 0%, rgba(0,0,0,0.99) 1%, rgba(0,0,0,0) 100%);
+         background-image: linear-gradient(0deg, rgb(0,0,0) 0%, rgba(0,0,0,0.99) 1%, rgba(0,0,0,0) 100%);
+      }
+      .listing-logo{
+         display: none;
+      }
+      .listing-time{
+         display: inline-block;
+         font-size: 11px;
+         color: $white;
+         font-weight: 600;
+         padding: 1px 10px;
+         background: $theme-color;
+         line-height: 22px;
+         letter-spacing: 1px;
+         text-transform: uppercase;
+         position: absolute;
+         left: 20px; 
+         top: 20px;
+         z-index: 11;
+         &.open{
+            background: #35C54C;
+         }
+      }
+      .wishlist-icon-content{
+         position: absolute;
+         top: 16px;
+         right: 20px;
+         z-index: 11;
+         line-height: 1;
+         a{
+            color: $white;
+            display: inline-block;
+            transition: all 0.35s;
+            @include size(30px, 30px);
+            border-radius: 4px;
+            background: rgba(0, 0, 0, 0.3);
+            text-align: center;
+            line-height: 32px;
+            &.wishlist-added{
+               background: $theme-color;
+               .icon{
+                  &:before{
+                     font-weight: 900;
+                  }
+               }
+            }
+            &:hover{
+               background: rgba(0, 0, 0, 0.6);
+            }
+         }
+      }
+      .listing-logo{
+         position: absolute;
+         bottom: 20px;
+         left: 20px;
+         @include size(45px, 45px);
+         border-radius: 50%;
+         padding: 6px;
+         overflow: hidden;
+         box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08);
+         background: $white; 
+      }
+      .link-overlay{
+         @include size(100%, 100%);
+         position: absolute;
+         top: 0;
+         left: 0;
+         z-index: 9;
+      }
+   }
+   .listing-content{
+      padding: 30px 30px 0;
+      background: none;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      z-index: 11; 
+      transition: all 0.35s;
+      .title{
+         font-size: 20px;
+         margin: 5px 0 5px;
+         a{
+            color: $white;
+         }
+      }
+      .listing-tagline{
+         line-height: 24px;
+         color: $white;
+         opacity: 0.8;
+         p{
+            margin-bottom: 0;
+         }
+      }
+      .listing-meta{
+         margin-top: 20px;
+         font-size: 14px;
+         line-height: 20px;
+         height: 0;
+         opacity: 0;
+         margin: 0;
+         transition: all 0.35s;
+         display: none;
+         .location{
+            a{
+               color: $body-color;
+               &:hover{
+                  color: $black;
+               }
+            }
+            .icon{
+               color: $theme-color;
+               width: 12px;
+               margin-right: 10px;
+               font-size: 15px;
+            }
+         }
+         .phone{
+            margin-top: 6px;
+            .icon{
+               color: $theme-color;
+               width: 12px;
+               margin-right: 10px;
+               font-size: 15px;
+            }
+            a{
+               color: $body-color;
+               &:hover{
+                  color: $black;
+               }
+            }
+         }
+      }
+      .content-footer{
+         border-top: 1px solid rgba(255, 255, 255, 0.2);
+         padding: 12px 0;
+         margin-top: 22px;
+         .lt_block-category{
+            .cat-name, .more-cat-number{
+               color: $white;
+            }
+         }
+         .lt-review-show-start{
+            float: right;
+            padding-top: 10px;
+         }
+         .lt-avg-review{
+            float: right;
+            color: $theme-color;
+            font-family: $headings-font-family;
+            font-weight: 600;
+            padding-top: 3px;
+         }
+      }
+   }
+   &.job_position_featured{
+      .listing-image{
+         .lt-featured{
+            display: block!important;
+            font-size: 11px;
+            color: $white;
+            background: $theme-color;
+            font-family: $headings-font-family;
+            font-weight: 500;
+            line-height: 22px;
+            padding: 1px 10px;
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            @include translateX(-50%);
+            z-index: 11;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+         }
+         span{
+            position: relative;
+            z-index: 11;
+            color: $white;
+         }
+      }
+   }
+   &:hover{
+      .listing-content{
+         background: $white;
+         .title{
+            a{
+               color: $black;
+               &:hover{
+                  color: $theme-color;
+               }
+            }
+         }
+         .listing-tagline{
+            color: $body-color;
+            opacity: 1;
+         }
+         .listing-meta{
+            height: auto;
+            opacity: 1;
+            margin: 20px 0 0;
+            display: block;
+         }
+         .content-footer{
+            border-top-color: rgba(0, 0, 0, 0.1);
+            .lt_block-category{
+               .cat-name, .more-cat-number{
+                  color: $black;
+                  &:hover{
+                     color: $theme-color;
+                  }
+               }
+            }
+         }
+      }
+   }
+}
+
+.listing-block-3{
+   margin-top: 15px;
+   margin-bottom: 45px;
+   @media(max-width: 500px){
+      margin-top: 0;
+      margin-bottom: 30px;
+   }
+   > .block-content{
+      display: flex;
+      flex-wrap: wrap;
+      .listing-image{
+         width: 42%;
+         flex: 0 0 42%;
+         @media(max-width: 500px){
+            width: 100%;
+            flex: 0 0 100%;
+         }
+      }
+      .listing-content{
+         width: 58%;
+         flex: 0 0 58%; 
+         @media(max-width: 500px){
+            width: 100%;
+            flex: 0 0 100%;
+         }
+      }
+   }
+   .listing-image{
+      position: relative;
+      min-height: 50px;
+      background: $bg-gray;
+      > .content-inner{
+         position: absolute;
+         top: -15px;
+         bottom: -15px;
+         left: 0;
+         width: 100%;
+         z-index: 1;
+         border-radius: 0 4px 4px 0;
+         overflow: hidden;
+         @media(max-width: 500px){
+            top: 0;
+            bottom: 0;
+            position: relative;
+         }
+         img.wp-post-image{
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            -o-object-fit: cover;
+            object-fit: cover;
+            -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            top: 50%;
+            left: 50%;
+            @media(max-width: 500px){
+               position: relative;
+               transform: none;
+               top: 0;
+               left: 0;
+            }
+         }
+      }
+      .listing-logo{
+         position: absolute;
+         bottom: 20px;
+         left: 20px;
+         @include size(45px, 45px);
+         border-radius: 50%;
+         padding: 6px;
+         overflow: hidden;
+         box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08);
+         background: $white; 
+      }
+      .listing-time{
+         display: inline-block;
+         font-size: 11px;
+         color: $white;
+         font-weight: 600;
+         padding: 1px 10px;
+         background: $theme-color;
+         line-height: 22px;
+         letter-spacing: 1px;
+         text-transform: uppercase;
+         position: absolute;
+         right: 15px; 
+         top: 15px;
+         z-index: 11;
+         &.open{
+            background: #35C54C;
+         }
+      }
+      .link-overlay{
+         @include size(100%, 100%);
+         position: absolute;
+         top: 0;
+         left: 0;
+         z-index: 9;
+      }
+   }
+   .listing-content{
+      background: $white;
+      position: relative;
+      box-shadow: 0px 0px 10px 0px rgba(36, 37, 51, 0.09);
+      border-radius: 0 4px 4px 0;
+      .lt-content-block{
+         padding: 20px 26px 15px;
+      }
+      .title{
+         font-size: 20px;
+         margin: 5px 0 5px;
+      }
+      .listing-tagline{
+         line-height: 24px;
+         margin: 2px 0 10px;
+         p{
+            margin-bottom: 0;
+         }
+      }
+      .listing-meta{
+         margin-top: 15px;
+         font-size: 14px;
+         line-height: 20px;
+         > div{
+            margin-bottom: 10px;
+            &:last-child{
+               margin-bottom: 0;
+            }
+         }
+         .phone, .location{
+            .icon{
+               width: 12px;
+               margin-right: 6px;
+               font-size: 16px;
+               position: relative;
+               top: 1px;
+               color: $theme-color;
+            }
+            a{
+               color: $body-color;
+               &:hover{
+                  color: $theme-color;
+               }
+            }
+         }
+      }
+      .content-footer{
+         border-top: 1px solid $border-color;
+         padding: 12px 0 0;
+         margin-top: 16px;
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+         .location{
+            font-size: 14px;
+            a{
+               color: $body-color;
+               &:hover{
+                  color: $black;
+               }
+            }
+            .icon{
+               width: 12px;
+               margin-right: 4px;
+               font-size: 15px;
+            }
+         }
+         .wishlist-icon-content{
+            line-height: 1;
+            a{
+               display: inline-block;
+               transition: all 0.35s;
+               font-size: 16px;
+               &.wishlist-added{
+                  .icon{
+                     &:before{
+                        color: $theme-color;
+                        font-weight: 900;
+                     }
+                  }
+               }
+               &:hover{
+                  font-size: 19px;
+               }
+            }
+         }
+      }
+   }
+   &.job_position_featured{
+      .listing-image{
+         .lt-featured{
+            display: block!important;
+            font-size: 11px;
+            color: $white;
+            background: $theme-color;
+            font-weight: 500;
+            padding: 0 15px;
+            line-height: 22px;
+            position: absolute;
+            left: 15px;
+            top: 15px;
+            z-index: 11;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+         }
+         span{
+            position: relative;
+            z-index: 11;
+            color: $white;
+         }
+      }
+   }
+}
+
+.listing-block-4{
+   border-radius: 4px;
+   margin-bottom: 30px;
+   padding: 20px;
+   background: $white;
+   .listing-image{
+      position: relative;
+      min-height: 50px;
+      background: $bg-gray;
+      &:after{
+         content: '';
+         position: absolute;
+         top: 0;
+         left: 0;
+         z-index: 1;
+         @include size(100%, 100%);
+         background-image: -webkit-linear-gradient(to top, rgba(0,0,0,0) 60%, rgba(0,0,0,0.8) 99%, rgb(0,0,0) 100%);
+         background-image: -moz-linear-gradient(to top, rgba(0,0,0,0) 60%, rgba(0,0,0,0.8) 99%, rgb(0,0,0) 100%);
+         background-image: -ms-linear-gradient(to top, rgba(0,0,0,0) 60%, rgba(0,0,0,0.8) 99%, rgb(0,0,0) 100%);
+         background-image: -o-linear-gradient(to top, rgba(0,0,0,0) 60%, rgba(0,0,0,0.8) 99%, rgb(0,0,0) 100%);
+         background-image: linear-gradient(to top, rgba(0,0,0,0) 60%, rgba(0,0,0,0.8) 99%, rgb(0,0,0) 100%);
+      }
+      .listing-logo{
+         position: absolute;
+         bottom: -23px;
+         left: 15px;
+         @include size(46px, 46px);
+         border-radius: 50%;
+         padding: 6px;
+         overflow: hidden;
+         box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08);
+         background: $white; 
+         z-index: 11;
+      }
+      .listing-time{
+         display: inline-block;
+         font-size: 11px;
+         color: $white;
+         font-weight: 600;
+         padding: 1px 10px;
+         background: $theme-color;
+         line-height: 22px;
+         letter-spacing: 1px;
+         text-transform: uppercase;
+         position: absolute;
+         left: 20px; 
+         top: 20px;
+         z-index: 11;
+         &.open{
+            background: #35C54C;
+         }
+      }
+      .wishlist-icon-content{
+         position: absolute;
+         bottom: -20px;
+         right: 15px;
+         z-index: 11;
+         line-height: 1;
+         a{
+            color: $black;
+            display: inline-block;
+            transition: all 0.35s;
+            @include size(40px, 40px);
+            border-radius: 50%;
+            background: $theme-color-2;
+            text-align: center;
+            line-height: 40px;
+            &.wishlist-added{
+               background: $theme-color;
+               color: $white;
+               .icon{
+                  &:before{
+                     font-weight: 900;
+                  }
+               }
+            }
+            &:hover{
+               opacity: 0.9;
+            }
+         }
+      }
+      .link-overlay{
+         @include size(100%, 100%);
+         position: absolute;
+         top: 0;
+         left: 0;
+         z-index: 9;
+      }
+   }
+   .listing-content{
+      background: $white;
+      position: relative;
+      .lt-content-block{
+         padding: 42px 15px 5px;
+         @media(max-width: 1024px){
+            padding-left: 0;
+            padding-right: 0;
+         }
+      }
+      .title{
+         font-size: 20px;
+         margin: 5px 0 5px;
+      }
+      .listing-tagline{
+         line-height: 24px;
+         margin: 2px 0 10px;
+         p{
+            margin-bottom: 0;
+         }
+      }
+      .listing-meta{
+         margin-top: 12px;
+         font-size: 14px;
+         line-height: 20px;
+         font-weight: 500;
+         > div{
+            margin-bottom: 6px;
+            .icon{
+               width: 20px;
+               margin-right: 6px;
+               font-size: 19px;
+               position: relative;
+               top: 3px;
+               color: $theme-color;
+            }
+            a{
+               color: $body-color;
+               &:hover{
+                  color: $theme-color;
+               }
+            }
+         }
+      }
+   }
+   &.job_position_featured{
+      .listing-image{
+         .lt-featured{
+            display: block!important;
+            font-size: 11px;
+            color: $white;
+            background: $theme-color;
+            font-family: $headings-font-family;
+            font-weight: 500;
+            line-height: 22px;
+            padding: 1px 10px;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            z-index: 11;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+         }
+         span{
+            position: relative;
+            z-index: 11;
+            color: $white;
+         }
+      }
+   }
+}
+
+.swiper-slide{
+   .listing-block{
+      margin-top: 15px;
+   }
+}
+
+.listing-list{
+   @media(max-width: 650px){
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+   }
+   .listing-content-inner{
+      display: -webkit-box;
+      display: flex;
+      flex-wrap: wrap;
+      > div{
+         -webkit-box-flex: 0;
+      }
+   }
+   .listing-image{
+      flex: 0 0 40%;
+      max-width: 40%;
+      float: left;
+      @media(max-width: 650px){
+         flex: 0 0 100%;
+         max-width: 100%; 
+      }
+      .listing-logo{
+         bottom: 20px;
+         top: auto;
+      }
+      .listing-time{
+         display: inline-block;
+         font-size: 11px;
+         color: $white;
+         font-weight: 600;
+         padding: 1px 10px;
+         background: $theme-color;
+         line-height: 22px;
+         letter-spacing: 1px;
+         text-transform: uppercase;
+         position: absolute;
+         left: 20px; 
+         top: 20px;
+         z-index: 11;
+         &.open{
+            background: #35C54C;
+         }
+      }
+      .wishlist-icon-content{
+         position: absolute;
+         top: 16px;
+         right: 20px;
+         z-index: 11;
+         line-height: 1;
+         a{
+            color: $white;
+            display: inline-block;
+            transition: all 0.35s;
+            @include size(30px, 30px);
+            border-radius: 4px;
+            background: rgba(0, 0, 0, 0.3);
+            text-align: center;
+            line-height: 32px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            &.wishlist-added{
+               background: $theme-color;
+               .icon{
+                  &:before{
+                     font-weight: 900;
+                  }
+               }
+            }
+            &:hover{
+               background: rgba(0, 0, 0, 0.6);
+            }
+         }
+      }
+   }
+   .listing-content{
+      flex: 0 0 60%;
+      max-width: 60%;
+      float: left;
+      padding: 25px 30px 65px;
+      position: relative;
+      @media(max-width: 1260px){
+         padding-top: 20px;
+      }
+      @media(max-width: 650px){
+         flex: 0 0 100%;
+         max-width: 100%; 
+      }
+      .title{
+         margin: 0 0 8px;
+      }
+      .listing-tagline{
+         display: block!important;
+         line-height: 24px;
+      }
+      .listing-meta{
+         margin-top: 15px;
+      }
+      .content-footer{
+         padding: 8px 30px 8px;
+         margin: 0;
+         position: absolute;
+         bottom: 0;
+         left: 0;
+         width: 100%;
+      }
+   }
+}
+
+.leaflet-container{
+   .leaflet-marker-icon{
+      &.gva-logo-map{
+         position: relative;
+         .logo-map{
+            svg{
+               fill: $theme-color;
+            }
+            .lt-logo{
+               position: absolute;
+               @include size(34px, 34px);
+               top: 2px;
+               left: 10px;
+               background: $white;
+               z-index: 1;
+               border-radius: 50%;
+               text-align: center;
+               padding: 3px;
+               i{
+                  font-size: 16px;
+                  padding-top: 8px;
+                  color: $theme-color;
+               }
+               img{
+                  max-width: 100%!important;
+                  border-radius: 50%;
+               }
+            }
+         }
+      }
+   }
+}
+
+.leaflet-popup{
+   .leaflet-popup-content-wrapper{
+      border-radius: 4px!important;
+      overflow: hidden;
+      padding: 0!important;
+      .leaflet-popup-content{
+         padding: 0;
+         margin: 0!important;
+         .gva-map-content-popup{
+            position: relative;
+            display: block;
+            .lt-top{
+               display: block;
+               padding: 20px 20px 0;
+               position: relative;
+               z-index: 11;
+               @include clearfix();
+               .listing-time, .listing-price{
+                  background: rgba(255, 255, 255, 0.2);
+                  color: $white;
+                  font-weight: 700;
+                  padding: 5px 15px;
+                  border: 2px solid rgba(255, 255, 255, 0.6);
+                  border-radius: 4px;
+                  display: inline-block;
+                  float: right;
+               }
+               .listing-price{
+                  float: left;
+               }
+            }
+            .image{
+               position: absolute;
+               @include size(102%, 102%);
+               top: 0;
+               left: 0;
+               z-index: 1;
+               background-size: cover;
+               background-position: center center;
+               &:after{
+                  content: '';
+                  background: rgba(0, 0, 0, 0.68);
+                  @include size(100%, 100%);
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  z-index: 1;
+               }
+            }
+            .content-inner{
+               position: relative;
+               z-index: 11;
+               padding: 20px;
+               display: block;
+               min-width: 326px;
+               > span{
+                  display: block;
+                  color: $white;
+                  font-size: 14px;
+                  margin-bottom: 6px;
+                  font-family: $font-family-base;
+                  i{
+                     width: 22px;
+                  }
+                  a{
+                     color: $white;
+                  }
+               }
+               .title{
+                  font-size: 18px;
+                  margin: 0 0 8px;
+                  a{
+                     color: $white;
+                     &:hover{
+                        color: $theme-color;
+                     }
+                  }
+               }
+               .listing-tagline{
+                  margin-bottom: 30px;
+               }
+            }
+         }
+      }
+   }
+   .leaflet-popup-tip{
+      background: rgba(255, 255, 255, 0.6);
+   }
+}
+
+.leaflet-container{
+   a.leaflet-popup-close-button{
+      @include size(22px, 22px); 
+      border-radius: 4px;
+      background: $white;
+      color: $theme-color;
+      transition: all 0.35s;
+      line-height: 22px;
+      font-size: 16px;
+      font-weight: 700;
+      text-align: center;
+      top: -11px;
+      right: -11px;
+      position: absolute;
+      z-index: 11;
+      &:hover{
+         background: $theme-color;
+         color: $white;
+      } 
+   }
+}
+
+.my-listing-item{
+   background: $white;
+   .listing-image{
+      flex: 0 0 220px;
+      max-width: 220px;
+      border-radius: 3px 0 0 0;
+      overflow: hidden;
+      @media(max-width: 580px){
+         flex: 0 0 100%;
+         max-width: 100%;
+         min-height: 220px;
+      }
+      img{
+         position: absolute;
+         height: 100%;
+         width: 100%;
+         object-fit: cover;
+         transform: translate(-50%, -50%);
+         top: 50%;
+         left: 50%;
+      }
+      .wishlist-icon-content{
+         a{
+            padding-top: 8px;
+         }
+      }
+   }
+   .listing-content{
+      flex: 0 0 calc(100% - 220px);
+      max-width: calc(100% - 220px);
+      padding: 25px 20px 25px;
+      @media(max-width: 580px){
+         flex: 0 0 100%;
+         max-width: 100%;
+      }
+      .listing-status{
+         position: absolute;
+         background: $theme-color;
+         top: 0;
+         right: 0;
+         z-index: 11;
+         color: $white;
+         padding: 0 10px;
+         line-height: 22px;
+         font-size: 11px;
+         font-weight: 600;
+         letter-spacing: 1px;
+         text-transform: uppercase;
+         font-family: $headings-font-family;
+      }
+      .listing-meta{
+         margin-top: 10px;
+         > div{
+            margin-bottom: 15px;
+            &:last-child{
+               margin-bottom: 0;
+            }
+         }
+         .location{
+            .icon{
+               top: 1px;
+               width: 14px;
+            }
+         }
+      }
+      .lt_block-category{
+         display: block;
+         font-weight: 600;
+         font-family: $headings-font-family;
+         margin-bottom: 8px;
+         font-size: 15px;
+         line-height: 18px;
+         a{
+            color: $body-color;
+            line-height: 18px;
+            &:hover{
+               color: $theme-color;
+            }
+         }
+         .icon{
+            color: $theme-color;
+            margin-right: 6px;
+            background: none;
+            width: auto;
+            height: auto;
+            line-height: 18px;
+         }
+         .more-cat{
+            .more-cat-number{
+               height: auto;
+               color: $body-color;
+               line-height: 20px;
+               padding-top: 4px;
+            }
+         }
+      }
+      &.without_thumbnail{
+         flex: 0 0 100%;
+         max-width: 100%;
+      }
+   }
+   .listing-action{
+      width: 100%;
+      padding: 15px 20px;
+      border-top: 1px solid $border-color;  
+      @include clearfix();
+      .action-left{
+         float: left;
+         .listing-meta-item{
+            font-size: 14px;
+            line-height: 24px;
+            .label{
+               color: $black;
+               font-weight: 600;
+            }
+         }
+
+      }
+      .action-right{
+         float: right;
+         @media(max-width: 1150px){
+            float: left;
+            margin-top: 10px;
+            width: 100%;
+         }
+         .job-dashboard-actions{
+            a{
+               margin-left: 10px;
+               margin-top: 5px;
+               &:first-child{
+                  margin-left: 0;
+               }
+            }
+         }
+      }
+   }
+}
+
+.lt_block-category{
+   .cat-item{
+      float: left;
+      a{
+         display: inline-block;
+         line-height: 34px;
+         .icon{
+            display: inline-block;
+            line-height: 33px;
+            text-align: center;
+            font-size: 16px;  
+            margin-right: 8px; 
+            @include size(36px, 36px);
+            border-radius: 50%; 
+            background: $theme-color;
+            border: 2px solid $white;
+            color: $white;
+            transition: all 0.35s;
+            .fas, .fa, .fab{
+               font-size: 14px; 
+            }
+            .la, .las, .lab{
+               font-size: 22px; 
+               position: relative;
+               top: 3px;
+            }
+            img{
+               width: 16px;
+            }
+         }
+         .cat-name{
+            display: inline-block;
+            font-size: 14px;
+            font-weight: 700;
+            position: relative;
+            font-family: $headings-font-family;
+            transition: all 0.35s;
+            letter-spacing: -0.1px;
+         }
+         &:hover{
+            color: $theme-color;
+            .icon{
+               box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+            }
+         }
+      }
+   }
+   .more-cat{
+      float: left;
+      position: relative;
+      .more-cat-number{
+         @include size(25px, 32px);
+         line-height: 32px;
+         border-radius: 50%;
+         text-align: center;
+         color: $black;
+         font-family: $headings-font-family;
+         font-size: 14px;
+         transition: all 0.35s;
+         font-weight: 700;
+         margin-top: 3px;
+         margin-left: -2px;
+         &:hover{
+            cursor: pointer;
+            color: $theme-color!important;
+         }
+      }
+      .more-cat-content{
+         display: none;
+         position: absolute;
+         left: -50px;
+         margin-left: 19px;
+         bottom: 100%;
+         margin-bottom: 10px;
+         background: $white;
+         padding: 10px 20px;
+         border-radius: 4px;
+         box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+         border: 1px solid $border-color;
+         &:after{
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -8px;
+            width: 16px;
+            height: 16px;
+            border-width: 8px;
+            border-style: solid;
+            border-color: #fff transparent transparent transparent;
+            display: block;
+         }
+         .cat-item{
+            margin: 0;
+            width: 100%;
+            position: relative;
+            white-space: nowrap;
+            a{
+               &:after{
+                  content: '';
+                  height: 100%;
+                  position: absolute;
+                  top: 0;
+                  left: -15px;
+                  right: -15px;
+                  z-index: 11;
+               }
+               .icon{
+                  @include size(30px, 30px);
+                  background: none;
+                  line-height: 30px;
+                  font-size: 16px;
+                  img{
+                     width: 15px;
+                  }
+               }
+            }
+            .cat-name{
+               height: auto;
+               position: relative;
+               top: -1px;
+               font-size: 12px;
+            }
+         }
+      }
+      &:hover{
+         .more-cat-number{
+            color: $theme-color;
+         }
+      }
+      &.open{
+         .more-cat-content{
+            display: block;
+         }
+      }
+   }
+}

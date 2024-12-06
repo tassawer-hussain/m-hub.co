@@ -1,0 +1,141 @@
+.d-block{display: block!important;}
+.d-none{display: none!important;}
+.edit-post-layout__metaboxes .postbox-container .postbox{margin-bottom: 20px;}
+.wp_job_manager_meta_data .form-field input[type*="checkbox"]{width: 16px; margin-right: 5px;}
+.wp_job_manager_meta_data .form-field.full-width{width: 100%!important;}
+
+tr.form-field.job-listing-amenity-category td.values label{ display: block; margin-bottom: 3px;}
+ul.job-manager-term-checklist-lt_amenities li{width: 50%; float:left;}
+.amenities-alert{font-style: italic;font-size: 16px;width: 100%;float: left;}
+ul.job-manager-term-checklist li label{font-weight: 400!important; display: inline-block!important;}
+.custom-map-field .col-width-2{width: 50%; float: left;}
+.custom-map-field .col-width-2:first-child .content-inner{padding-right: 15px;}
+.custom-map-field .col-width-2:last-child .content-inner{padding-left: 15px;}
+@media(max-width: 992px){
+   .custom-map-field .col-width-2{width: 100%;}
+}
+.custom-map-field .last-col .field_job_location{width: 100%;}
+.custom-map-field .last-col .field_job_latitude, .custom-map-field .last-col .field_job_longitude{width: 50%; float: left; margin-top: 15px; padding: 0;}
+.custom-map-field .last-col .latitude-text-inner .content-inner{padding-right: 15px;}
+.custom-map-field .last-col .longitude-text-inner .content-inner{padding-left: 15px;}
+.wp_job_manager_meta_data .form-field select{width: 100%;}
+#lt_field_job_city.loading{transition: all 0.35s; opacity: 0.6;}
+ul.job-manager-term-checklist-lt_amenities.loading{transition: all 0.35s; opacity: 0.6;}
+ul.job-manager-term-checklist-lt_amenities .pretty .state{display: inline;margin-left: 2px;}
+ul.job-manager-term-checklist-lt_amenities .pretty .state .icon{display: none;}
+.form-field.field-type-custom-heading.full-width{width: 100%!important; border-bottom: 2px solid #0073AA; padding: 20px 0 8px!important;}
+.form-field.field-type-custom-heading.full-width .heading-text{font-weight: 700; font-size: 18px; color: #0073AA;}
+.custom-map-field_map{width: 100%; height: 250px;}
+.field-places-autocomplete{position: relative;}
+.field-places-autocomplete .places_list_autocomplete{position: absolute;top:100%;left:0;width: 100%;box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);background: #fff;border: 1px solid rgba(0, 0, 0, 0.2);}
+.field-places-autocomplete .places_list_autocomplete ul li{list-style: none;padding: 8px 15px;margin: 0;line-height: 22px;border-bottom: 1px solid rgba(0, 0, 0, 0.2);}
+.field-places-autocomplete .places_list_autocomplete ul li:last-child{border-bottom: 0;}
+.field-places-autocomplete .places_list_autocomplete ul li a{color: #000;}
+.field-places-autocomplete .places_list_autocomplete ul li .icon{font-size: 16px;margin-right: 5px;}
+.field-places-autocomplete .places_list_autocomplete ul li a:hover{cursor: pointer; color: #2981CA;}
+#gallery-metabox-list > li{width: 30%; float: left; margin-right:3%;position: relative;}
+#gallery-metabox-list > li::after{content: ''; background: rgb(0,0,0,0.6);opacity:0;position: absolute;top:0;left:0;width:100%;height:96%;z-index:1;}
+#gallery-metabox-list > li:hover::after{opacity: 1;}
+#gallery-metabox-list > li img{max-width: 100%;}
+#gallery-metabox-list > li .change-image, #gallery-metabox-list > li .remove-image{opacity: 0;color: #fff; top: 5px; position: absolute;z-index: 11; text-decoration: none;}
+#gallery-metabox-list > li:hover .change-image, #gallery-metabox-list > li:hover .remove-image{opacity: 1;}
+#gallery-metabox-list > li .change-image:hover, #gallery-metabox-list > li .remove-image:hover{color: red;}
+#gallery-metabox-list > li .change-image{right: 30px;}
+#gallery-metabox-list > li .remove-image{right: 5px;}
+
+.lt-custom-socials-field .custom-socials-field .social-media-item{
+   display: -webkit-box;
+   display: -ms-flexbox;
+   display: flex;
+   margin-bottom: 6px;
+}
+.lt-custom-socials-field .custom-socials-field .social-media-item .col-select{
+   width: 300px;
+}
+.lt-custom-socials-field .custom-socials-field .social-media-item .col-link{
+   width: calc(100% - 300px);
+}
+.lt-custom-socials-field .btn-inline-remove{
+   font-size: 21px;
+   color: red;
+}
+.wp_job_manager_meta_data .form-field input[type="radio"]{
+   width: auto;
+}
+
+.custom-hours-field-item > .content-inner{
+   display: -webkit-box;
+   display: -ms-flexbox;
+   display: flex;
+}
+.custom-hours-field-item{
+   margin-bottom: 15px; 
+   padding-bottom: 15px;
+   border-bottom: 1px solid #ccc;
+}
+.custom-hours-field-item .heading-field{
+   font-weight: 700;
+   text-transform: capitalize;
+   width: 100px;
+   padding-top: 15px;
+}
+.custom-hours-field-item .field-repeater .field-repeater-item{
+   display: -webkit-box;
+   display: -ms-flexbox;
+   display: flex;
+   -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.custom-hours-field-item .day-option{
+   margin-right: 20px;
+   padding-top: 15px;
+}
+.custom-hours-field-item .day-option select{
+   min-width: 160px;
+}
+.custom-hours-field-item .field-repeater .field-repeater-item select{
+   margin-right: 20px;
+   min-width: 150px;
+   margin-top: 15px;
+}
+.custom-hours-field-item .field-repeater .field-repeater-item .btn-inline-remove{
+   color: red;
+   margin-top: 10px;
+   font-size: 21px;
+}
+.lt-custom-booking-type-field .field-tab .content-inner, .lt-custom-booking-type-field .field-tab .content-inner .form-field{
+   display: -webkit-box;
+   display: -ms-flexbox;
+   display: flex;
+   flex: 0 0 200px;
+}
+.lt-custom-booking-type-field .field-tab .content-inner .form-field input{
+   margin-right: 6px;
+   margin-top: 5px;
+}
+.lt-custom-booking-type-field .field-tab-content .tab-content-item{
+   display: none;
+}
+.lt-custom-booking-type-field .field-tab-content .tab-content-item.active{
+   display: block;
+}
+.lt-custom-additional-info-field .additional-info-item{
+   margin-bottom: 10px;
+   display: -webkit-box;
+   display: -ms-flexbox;
+   display: flex;
+}
+.lt-custom-additional-info-field .additional-info-item > *{
+   padding: 0 5px;
+}
+.lt-custom-additional-info-field .additional-info-item input{
+   min-width: 300px;
+}
+.lt-custom-additional-info-field .btn-inline-remove{
+   font-size: 21px;
+   color: red;
+}
+.lt-custom-additional-info-field > .custom-additional-info-field{
+   padding-top: 10px;
+}

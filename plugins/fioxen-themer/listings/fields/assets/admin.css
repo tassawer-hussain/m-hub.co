@@ -1,0 +1,82 @@
+.lt-listing-field-wrap{
+   max-width: 890px;
+}
+.lt-listing-field-wrap .lt-field-row .lt-repeater-field-wrap{
+   box-shadow: 0px 5px 8px 0px rgb(0 0 0 / 4%);
+   background-color: #FFFFFF;
+   border: 1px solid #ededed;
+   
+   margin-bottom: 10px;
+}
+.lt-listing-field-wrap .field-row-head{
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   cursor: pointer;
+   padding: 5px 20px;
+   border-bottom: 1px solid #ccc;
+   color: #000;
+   font-weight: 700;
+}
+
+.lt-listing-field-wrap .lt-row-body{
+   display: flex;
+   flex-wrap: wrap;
+   align-items: center;
+   padding: 20px 20px 0;
+}
+.lt-listing-field-wrap .lt-row-body > .form-group{
+   padding: 0 2%;
+   flex: 0 0 46%;
+   width: 46%;
+   margin-bottom: 15px;
+}
+.lt-listing-field-wrap .lt-row-body > .form-group label{
+   display: block;
+   color: #000;
+   font-weight: 700;
+}
+.lt-listing-field-wrap .lt-row-body > .form-group input:not(.input-checkbox), .lt-listing-field-wrap .lt-row-body > .form-group select{
+   width: 100%;
+}
+
+.lt-listing-field-wrap .field-type-custom-heading .field-row-head{
+   background: #183153!important;
+   color: #fff;
+}
+.lt-listing-field-wrap .lt-header-btn-group{
+   display: flex;
+}
+.lt-listing-field-wrap .lt-header-btn-group button{
+   width: 40px;
+   padding: 4px 0;
+   background: #E03131;
+   color: #fff;
+   border: none;
+   box-shadow: none!important;
+   margin-left: 5px;
+   font-size: 14px;
+}
+.lt-listing-field-wrap .lt-header-btn-group button.edit_field{
+   background: #146EBE;
+}
+.lt-listing-field-wrap .lt-header-btn-group button:hover{
+   cursor: pointer;
+}
+
+.lt-listing-field-wrap .lt-row-body{display: none;} 
+.lt-listing-field-wrap .lt-row-body.lt-field-visible{display: flex;} 
+
+.lt-listing-field-wrap .repeat-new-item{display: block!important;}
+
+.lt-field-row.field-type-group{
+   background: #183153!important;
+   color: #fff;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   padding: 5px 20px;
+   font-weight: 700;
+   margin-bottom: 10px;
+   text-transform: capitalize;
+}
